@@ -1,0 +1,76 @@
+{
+  "schema": "lgd.hit-list/1",
+  "updated": "2026-11-18",
+  "auditor": "lgd-skill-review (six dimensions)",
+  "policy": {
+    "self_audited_is_not_third_party": true,
+    "deductions_require_evidence": true,
+    "golden_set_must_be_runnable": true,
+    "network_and_credentials_must_be_zero": true
+  },
+  "entries": [
+    {
+      "name": "summarize-pro",
+      "display_name_zh": "会议纪要专家",
+      "repo": "https://github.com/zhaoxinghua09-cell/summarize-pro",
+      "version": "2.0.7",
+      "score": "100/100",
+      "audit_mode": "self-audited",
+      "evidence": {
+        "golden_set": "24/24 pass",
+        "executed_on": "Python 3.13.18, Windows",
+        "exit_code": 0,
+        "tracer": "citecheck maps each output sentence to source tokens"
+      },
+      "differentiator_zh": "每条数字/日期可回溯；结论按 已定/暂定/提案/条件 分级；待办按 明确接活/被点名未确认/仅表意向 分级",
+      "differentiator_en": "Every figure traced to source; decisions graded firm/provisional/proposal/conditional; commitments graded committed/named_unconfirmed/intent_only"
+    },
+    {
+      "name": "debug-pro",
+      "display_name_zh": "排障专家",
+      "repo": "https://github.com/zhaoxinghua09-cell/debug-pro",
+      "version": "2.1.4",
+      "score": "100/100",
+      "audit_mode": "self-audited",
+      "evidence": {
+        "golden_set": "10/10 pass",
+        "executed_on": "Python 3.13.18, Windows",
+        "exit_code": 0,
+        "tracer": "envsnap redacts keys matching KEY/TOKEN/SECRET/PASS/CRED/AUTH/COOKIE"
+      },
+      "differentiator_zh": "把「我复现了」变成证据表：异常类型/末栈帧/退出码/HTTP 状态/时间戳一次给全",
+      "differentiator_en": "Turns 'I reproduced it' into an evidence table: exception type, last frame, exit code, HTTP status, timestamp"
+    },
+    {
+      "name": "wechat-viral-topic",
+      "display_name_zh": "公众号选题专家",
+      "repo": "https://github.com/zhaoxinghua09-cell/wechat-viral-topic",
+      "version": "2.1.4",
+      "score": "100/100",
+      "audit_mode": "self-audited",
+      "evidence": {
+        "golden_set": "11/11 pass",
+        "executed_on": "Python 3.13.18, Windows",
+        "exit_code": 0,
+        "tracer": "redline names the exact sentence that trips each rule"
+      },
+      "differentiator_zh": "选题按证据强度分级（真信号/弱信号/猜测），合规红线点名到句子",
+      "differentiator_en": "Topics graded signal / weak signal / guess; red lines point at the offending sentence"
+    },
+    {
+      "name": "lgd-skill-review",
+      "display_name_zh": "技能审计官",
+      "repo": "https://github.com/zhaoxinghua09-cell/lgd-skill-review",
+      "version": "1.1.7",
+      "score": "100/100",
+      "audit_mode": "self-audited",
+      "evidence": {
+        "golden_set": "5/5 pass",
+        "executed_on": "Python 3.13.18, Windows",
+        "exit_code": 0
+      },
+      "differentiator_zh": "六维审计引擎本身：扣分必须给证据，输出分数+阻断项+整改顺序，可整改后复评",
+      "differentiator_en": "The auditor itself: evidence-backed deductions, score + blockers + ordered remediation, re-runnable after fixes"
+    }
+  ]
+}
